@@ -36,5 +36,12 @@ foreach flag : engine_ldflags
   _engine_ldflags += flag
 endforeach
 
-engine_lib = static_library('engine', engine_srcs, include_directories: engine_incs_pri, c_args: _engine_cflags, cpp_args: _engine_cxxflags, link_args: _engine_ldflags)
+engine_lib = static_library(
+  'engine',
+  engine_srcs,
+  include_directories: engine_incs_pri,
+  c_args: _engine_cflags,
+  cpp_args: _engine_cxxflags,
+  link_args: _engine_ldflags,
+)
 engine = declare_dependency(link_with: engine_lib, include_directories: engine_incs_pub)

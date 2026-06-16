@@ -36,4 +36,13 @@ foreach flag : editor_ldflags
   _editor_ldflags += flag
 endforeach
 
-editor = executable('editor', editor_srcs, dependencies: editor_dep, c_args: _editor_cflags, cpp_args: _editor_cxxflags, link_args: _editor_ldflags)
+editor = executable(
+  'editor',
+  editor_srcs,
+  dependencies: editor_dep,
+  c_args: _editor_cflags,
+  cpp_args: _editor_cxxflags,
+  link_args: _editor_ldflags,
+  install: true,
+  install_dir: '/sdk/'
+)

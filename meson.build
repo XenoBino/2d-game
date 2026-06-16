@@ -10,6 +10,9 @@ cflags   = [ '-std=' + cstd ]
 cxxflags = [ '-std=' + cxxstd ]
 ldflags  = []
 
+meson.add_install_script('scripts/meson/gitignore.sh')
+
 subdir('libs/')
 subdir('engine/')
 subdir('editor/')
+subdir('game/')

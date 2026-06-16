@@ -28,6 +28,18 @@ scripts/build.bat
 scripts/build.sh
 ```
 
+## Running
+
+Run with
+
+```shell
+# To run the map editor
+bin/sdk/editor
+
+# To run the main game
+bin/game
+```
+
 ## Contributing
 
 ### Over HTTPs
